@@ -196,7 +196,7 @@ class Form extends Component {
             <p>Join 6 million young people taking action.</p>
           </div>
           <div className='container__block'>
-            <button className='facebook-login'> <a href='https://facebook.com' target='_blank'> Continue with Facebook </a></button>
+            <button className='facebook-login'> <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'> Continue with Facebook </a></button>
             <button className='login'> <a href='https://profile.dosomething.org/login'>Log In </a></button>
           <div className='divider'></div>
         </div>
