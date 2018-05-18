@@ -18,7 +18,7 @@ app.use(express.static(path.resolve(__dirname, '../build')));
 
 // Start our messageBroker instance, publish our form data
 app.post('/users', (req, res) => {
-  if (res.status >= 200 && res.status < 300) {
+  if (res.statusCode >= 200 && res.statusCode < 300) {
     const formData = JSON.stringify(req.body);
     const message = new MessageBroker(process.env.ROUTING_KEY);
 
