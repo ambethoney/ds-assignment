@@ -18,6 +18,9 @@ app.use(express.static(path.resolve(__dirname, '../build')));
 
 // Start our messageBroker instance, publish our form data
 app.post('/users', (req, res) => {
+  console.log('debugdebugdebugdebugdebugdebugdebug')
+  console.log(process.env.CLOUDAMQP_URL)
+  console.log('debugdebugdebugdebugdebugdebugdebug')
   if (res.statusCode >= 200 && res.statusCode < 300) {
     const formData = JSON.stringify(req.body);
     const message = new MessageBroker(process.env.ROUTING_KEY);
