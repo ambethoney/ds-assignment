@@ -11,6 +11,10 @@ const SendEmail = (payload) => {
   const data = JSON.parse(payload.content);
   const processedData = JSON.parse(data);
 
+  console.log('debugdebugdebugdebugdebugdebugdebug')
+  console.log(process.env.CLOUDAMQP_URL)
+  console.log('debugdebugdebugdebugdebugdebugdebug')
+
   let body = '';
   Object.keys(processedData).forEach(key => body += `${key}: ${processedData[key]} `);
 
