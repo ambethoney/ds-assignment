@@ -22,8 +22,7 @@ const SendEmail = (payload) => {
         FromName: 'Angelina Bethoney',
         Subject: 'New User Signup!',
         'Text-part': body,
-        Recipients: [{ Email: 'hello@angelina-marie.com' }],
-        // Recipients: [{ Email: 'dscodetest@mailinator.com' }],
+        Recipients: [{ Email: 'dscodetest@mailinator.com' }],
       });
   } catch (err) {
     console.log(`[MAILJET] error: ${err.message}`);

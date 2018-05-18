@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { STATUS } from '../constants'
 import Input from './Input'
+import PropTypes from 'prop-types'
+
 import { sendFormToQueue } from '../services/SendFormToQueue'
 import '../assets/styles/Form.css'
 import eye from '../assets/images/eye.svg'
