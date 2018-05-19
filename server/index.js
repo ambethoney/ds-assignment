@@ -24,9 +24,16 @@ app.post('/users', (req, res) => {
 
     message.start()
       .then(() => message.publish('', process.env.ROUTING_KEY, formData));
+
+      res.status(200).send('OK!');
+
   } else {
+
     const error = new Error(res.statusText || res.status);
     console.log(error);
+
+    res.status(500).send(error);
+    
   }
 });
 
